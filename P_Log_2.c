@@ -1,5 +1,5 @@
 #include <stdio.h>
-int printLn(int n)
+long long int printLn(long long int n)
 {
     int count = 0;
     if (n == 1)
@@ -11,9 +11,9 @@ int printLn(int n)
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
-    int m = printLn(n);
-    printf("%d", m);
+    long long int n;
+    scanf("%lld", &n);
+    long long int m = printLn(n);
+    printf("%lld", m);
     return 0;
 }
