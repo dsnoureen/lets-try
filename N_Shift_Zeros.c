@@ -1,7 +1,18 @@
 #include <stdio.h>
-int shiftZeroes(int arr1[], int n)
+int shiftZeroes(int arr[], int n)
 {
-    
+    int j = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] != 0)
+        {
+            arr[j++] = arr[i];
+        }
+    }
+    while (j < n)
+    {
+        arr[j++] = 0;
+    }
 }
 
 int main()
@@ -13,10 +24,10 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    int arr1[] = shiftZeroes(arr, n);
+    shiftZeroes(arr, n);
     for (int i = 0; i < n; i++)
     {
-        printf("%d ", arr1[i]);
+        printf("%d ", arr[i]);
     }
     return 0;
 }
